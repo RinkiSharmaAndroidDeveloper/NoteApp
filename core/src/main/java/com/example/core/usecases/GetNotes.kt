@@ -1,0 +1,10 @@
+package com.example.core.usecases
+
+import com.example.core.data.Note
+import com.example.core.repository.NoteRepository
+
+class GetNotes(private val noteRepository: NoteRepository) {
+
+    suspend operator fun invoke(id: Long) = noteRepository.getID(id)
+
+}
