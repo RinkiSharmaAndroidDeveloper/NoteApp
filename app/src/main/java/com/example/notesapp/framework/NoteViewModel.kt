@@ -30,10 +30,17 @@ class NoteViewModel(application: Application) : AndroidViewModel(application) {
         }
     }
 
-    fun getCrrentNote(note:Note){
+    fun updateCrrentNote(note:Note){
         coroutineScope.launch {
             val note = usecase.updateNote(note)
             currentNote.postValue(true)
+        }
+    }
+
+    fun deleteNote(note:Note){
+        coroutineScope.launch {
+            usecase.removeNote(note)
+            saved.postValue(true)
         }
     }
 }
