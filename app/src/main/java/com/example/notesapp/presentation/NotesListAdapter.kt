@@ -34,6 +34,7 @@ class NotesListAdapter(private val list : ArrayList<Note>,private val action: Li
         holder.binding.noteLayout.setOnClickListener {
             action.click(note)
         }
+        holder.binding.wordCount.text ="Word: ${note.wordCount}"
     }
 
     override fun getItemCount(): Int =list.size

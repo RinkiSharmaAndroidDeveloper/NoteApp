@@ -7,5 +7,6 @@ data class UseCase(
     val getAllNotes: GetAllNotes,
     val getNotes: GetNotes,
     val removeNote: RemoveNote,
-    val updateNote: UpdateNote
+    val updateNote: UpdateNote,
+    val wordCount: GetWordCount
 )
